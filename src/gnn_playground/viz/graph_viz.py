@@ -14,7 +14,7 @@ def _build_graph(edge_index: np.ndarray, num_nodes: int) -> nx.Graph:
     """Build a NetworkX graph from edge index array."""
     G = nx.Graph()
     G.add_nodes_from(range(num_nodes))
-    edges = list(zip(edge_index[0].tolist(), edge_index[1].tolist()))
+    edges = list(zip(edge_index[0].tolist(), edge_index[1].tolist(), strict=True))
     G.add_edges_from(edges)
     return G
 

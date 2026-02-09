@@ -13,7 +13,6 @@ from sklearn.metrics import (
     roc_auc_score,
 )
 
-
 DEFAULT_K_LIST = [10, 20, 50]
 
 
