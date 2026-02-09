@@ -1,0 +1,78 @@
+{
+    // Python Configuration
+    "python.defaultInterpreterPath": "${workspaceFolder}/.venv/Scripts/python.exe",
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}/src"
+    ],
+    "python.autoComplete.extraPaths": [
+        "${workspaceFolder}/src"
+    ],
+
+    // Testing
+    "python.testing.pytestEnabled": true,
+    "python.testing.pytestArgs": [
+        "tests",
+        "-v"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.cwd": "${workspaceFolder}",
+
+    // Linting & Formatting
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": false,
+
+    // Editor Settings
+    "editor.rulers": [120],
+    "editor.formatOnSave": false,
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+
+    // File Associations
+    "files.associations": {
+        "*.yaml": "yaml",
+        "*.yml": "yaml"
+    },
+
+    // Exclude from Explorer
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/*.pyc": true,
+        "**/.pytest_cache": true,
+        "**/.mypy_cache": true,
+        "**/.venv": false,
+        "**/outputs": false
+    },
+
+    // Search Exclude
+    "search.exclude": {
+        "**/__pycache__": true,
+        "**/*.pyc": true,
+        "**/.pytest_cache": true,
+        "**/outputs": true,
+        "**/.venv": true,
+        "**/data": true
+    },
+
+    // Terminal
+    "terminal.integrated.env.windows": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+    },
+    "terminal.integrated.env.linux": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+    },
+    "terminal.integrated.env.osx": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+    },
+
+    // Git
+    "git.ignoreLimitWarning": true,
+
+    // Files to watch
+    "files.watcherExclude": {
+        "**/.venv/**": true,
+        "**/outputs/**": true,
+        "**/data/**": true,
+        "**/__pycache__/**": true
+    }
+}

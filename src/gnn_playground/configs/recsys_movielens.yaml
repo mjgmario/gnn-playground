@@ -1,0 +1,12 @@
+task: recsys
+dataset: movielens_100k
+models: [lightgcn, mf]
+seed: 42
+epochs: 50
+lr: 0.001
+embedding_dim: 64
+weight_decay: 1.0e-5
+patience: 10
+batch_size: 1024
+k_list: [10, 20, 50]
+output_dir: outputs/recsys_movielens

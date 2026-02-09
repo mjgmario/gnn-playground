@@ -1,0 +1,83 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run All Tests",
+            "type": "shell",
+            "command": "uv run pytest tests/ -v",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "clear": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Run Tests with Coverage",
+            "type": "shell",
+            "command": "uv run pytest tests/ -v --cov=src/gnn_playground --cov-report=html",
+            "group": "test",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "clear": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Install Dependencies",
+            "type": "shell",
+            "command": "uv sync --extra dev",
+            "group": "none",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "clear": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Pre-commit: Run All",
+            "type": "shell",
+            "command": "uv run pre-commit run --all-files",
+            "group": "none",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "clear": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Clean Outputs",
+            "type": "shell",
+            "command": "rm -rf outputs/* .pytest_cache htmlcov",
+            "windows": {
+                "command": "if exist outputs\\figures rmdir /s /q outputs\\figures & if exist .pytest_cache rmdir /s /q .pytest_cache & if exist htmlcov rmdir /s /q htmlcov"
+            },
+            "group": "none",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "clear": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Show CLI Help",
+            "type": "shell",
+            "command": "uv run python -m gnn_playground --help",
+            "group": "none",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "clear": true
+            },
+            "problemMatcher": []
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+task: node_classification
+dataset: cora
+models: [mlp, gcn, graphsage, gat]
+seed: 42
+epochs: 200
+lr: 0.01
+hidden_dim: 64
+weight_decay: 5.0e-4
+patience: 20
+output_dir: outputs/node_classification_cora

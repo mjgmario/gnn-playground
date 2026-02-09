@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+*.egg
+dist/
+build/
+eggs/
+*.whl
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# IDE
+.idea/
+*.swp
+*.swo
+
+# Testing
+.pytest_cache/
+.mypy_cache/
+htmlcov/
+.coverage
+coverage.xml
+
+# Data and outputs (downloaded/generated, not tracked)
+data/
+!data/.gitkeep
+outputs/
+!outputs/.gitkeep
+
+# Model checkpoints
+*.pt
+*.pth
+*.ckpt
+
+# Experiment tracking
+wandb/
+mlruns/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# UV
+# uv.lock is tracked for reproducibility

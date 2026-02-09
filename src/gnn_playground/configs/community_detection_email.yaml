@@ -1,0 +1,6 @@
+task: community_detection
+dataset: email_eu_core_full
+methods: [louvain, spectral, gnn_kmeans]
+seed: 42
+n_clusters: 42
+output_dir: outputs/community_detection_email
